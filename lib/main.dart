@@ -8,17 +8,17 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     // throw UnimplementedError();
     return MaterialApp(
-      title: "Codemobiles",
+      title: "CM Layout",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          title: Text("CM Layout"),
         ),
-        body: Center(
-          child: Text(
-            "hollo codemobiles",
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          ),
-        ),
+         body: Center(
+        //   child: Text(
+        //     "hollo codemobiles",
+        //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        //   ),
+         ),
       ),
     );
   }
