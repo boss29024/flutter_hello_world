@@ -20,7 +20,14 @@ class MyApp extends StatelessWidget {
           constraints: BoxConstraints.expand(width: 150),
           // alignment: Alignment.topCenter,
           child: Text("codemobiles"),
-          decoration: BoxDecoration(color: Colors.green),
+          decoration: BoxDecoration(
+              color: Colors.green,
+              border: Border.all(
+                  width: 15, color: Colors.black, style: BorderStyle.solid),
+              borderRadius: BorderRadius.circular(20),
+              gradient: LinearGradient(
+                  colors: [Colors.red, Colors.yellow],
+                  begin: Alignment.topCenter)),
         ),
         // body: Center(
         //   child: Text(
