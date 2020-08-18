@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.baseline,
-          textBaseline: TextBaseline.alphabetic,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             FlutterLogo(),
             Text(
@@ -29,6 +29,23 @@ class MyApp extends StatelessWidget {
             )
           ],
         ),
+
+        //    body: Row(
+        //      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //      crossAxisAlignment: CrossAxisAlignment.baseline,
+        //      textBaseline: TextBaseline.alphabetic,
+        // children: <Widget>[
+        //   FlutterLogo(),
+        //   Text(
+        //     "Codemobileds",
+        //     style: TextStyle(fontSize: 30),
+        //   ),
+        //   Text(
+        //     "VMDEVs",
+        //     style: TextStyle(fontSize: 20),
+        //   )
+        // ],
+        // ),
         // body: Container( //คอนเทนเนอร์
         //   //color: Colors.amber,
         //   padding: EdgeInsets.all(20),
