@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -10,10 +10,16 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: "Codemobiles",
       home: Scaffold(
-        body: Text("hollo codemobiles"),
+        appBar: AppBar(
+          title: Text("Home"),
+        ),
+        body: Center(
+          child: Text(
+            "hollo codemobiles",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+        ),
       ),
     );
   }
-  
 }
-
