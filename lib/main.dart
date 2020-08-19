@@ -13,29 +13,52 @@ class MyApp extends StatelessWidget {
           title: Text("CM Layout"),
         ),
         body: ListView(
+          scrollDirection: Axis.horizontal,
           children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.directions_car),
-              title: Text("08.00"),
-              subtitle: Text("data"),
-              //enabled: false,
-              onTap: () {
-                print("click");
-              },
-              trailing: Icon(Icons.notifications_none),
+            Container(
+              alignment: FractionalOffset.center,
+              width: 150,
+              color: Colors.red,
+              child: Text(
+                "A",
+                style: TextStyle(fontSize: 100, color: Colors.white),
+              ),
             ),
-            ListTile(
-              selected: true,
-              leading: Icon(Icons.directions_bike),
-              title: Text("09.00"),
-              subtitle: Text("data"),
-              trailing: Icon(Icons.notifications_none),
+            Container(
+              alignment: FractionalOffset.center,
+              width: 150,
+              color: Colors.brown,
+              child: Text(
+                "B",
+                style: TextStyle(fontSize: 100, color: Colors.white),
+              ),
             ),
-            ListTile(
-              leading: Icon(Icons.directions_bus),
-              title: Text("10.00"),
-              subtitle: Text("data"),
-              trailing: Icon(Icons.notifications_none),
+            Container(
+              alignment: FractionalOffset.center,
+              width: 150,
+              color: Colors.cyan,
+              child: Text(
+                "C",
+                style: TextStyle(fontSize: 100, color: Colors.white),
+              ),
+            ),
+            Container(
+              alignment: FractionalOffset.center,
+              width: 150,
+              color: Colors.green,
+              child: Text(
+                "D",
+                style: TextStyle(fontSize: 100, color: Colors.white),
+              ),
+            ),
+            Container(
+              alignment: FractionalOffset.center,
+              width: 150,
+              color: Colors.indigo,
+              child: Text(
+                "E",
+                style: TextStyle(fontSize: 100, color: Colors.white),
+              ),
             )
           ],
         ),
@@ -43,6 +66,48 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// class MyApp extends StatelessWidget { ListViewแนวตั้ง
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: ListView(
+//           children: <Widget>[
+//             ListTile(
+//               leading: Icon(Icons.directions_car),
+//               title: Text("08.00"),
+//               subtitle: Text("data"),
+//               //enabled: false,
+//               onTap: () {
+//                 print("click");
+//               },
+//               trailing: Icon(Icons.notifications_none),
+//             ),
+//             ListTile(
+//               selected: true,
+//               leading: Icon(Icons.directions_bike),
+//               title: Text("09.00"),
+//               subtitle: Text("data"),
+//               trailing: Icon(Icons.notifications_none),
+//             ),
+//             ListTile(
+//               leading: Icon(Icons.directions_bus),
+//               title: Text("10.00"),
+//               subtitle: Text("data"),
+//               trailing: Icon(Icons.notifications_none),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { ListView1
 //   @override
