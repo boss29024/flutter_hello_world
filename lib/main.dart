@@ -15,9 +15,10 @@ class MyApp extends StatelessWidget {
         body: Stack(
           alignment: Alignment(0, 0.8),
           children: <Widget>[
-            Image.network(
-              'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg',
-              fit: BoxFit.cover,
+            CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg'),
+              radius: 150,
             ),
             Container(
               padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
               child: Text(
                 "Tabby cat",
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                     fontWeight: FontWeight.w600,
                     color: Colors.white),
               ),
