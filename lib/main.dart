@@ -7,38 +7,81 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      title: "CM Layout",
+      title: "CM Layouty",
       home: Scaffold(
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: Stack(
-          alignment: Alignment(0, 0.8),
-          children: <Widget>[
-            CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg'),
-              radius: 150,
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
-              decoration: BoxDecoration(
-                  color: Colors.black45,
-                  borderRadius: BorderRadius.circular(4)),
-              child: Text(
-                "Tabby cat",
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white),
+        body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                flex: 3,
+                child: Container(
+                  child: Text(
+                    "Codemobiles",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                    ),
+                  ),
+                  // color: Colors.red,
+                ),
               ),
-            )
-          ],
+              Expanded(
+                child: Container(
+                  child: RaisedButton(
+                    onPressed: () {},
+                    child: Text("Click"),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+// class MyApp extends StatelessWidget { Stack Layout
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: Stack(
+//           alignment: Alignment(0, 0.8),
+//           children: <Widget>[
+//             CircleAvatar(
+//               backgroundImage: NetworkImage(
+//                   'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg'),
+//               radius: 150,
+//             ),
+//             Container(
+//               padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
+//               decoration: BoxDecoration(
+//                   color: Colors.black45,
+//                   borderRadius: BorderRadius.circular(4)),
+//               child: Text(
+//                 "Tabby cat",
+//                 style: TextStyle(
+//                     fontSize: 15,
+//                     fontWeight: FontWeight.w600,
+//                     color: Colors.white),
+//               ),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { Grid View
 //   @override
