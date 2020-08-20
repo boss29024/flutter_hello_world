@@ -29,12 +29,10 @@ class MyApp extends StatelessWidget {
                   // color: Colors.red,
                 ),
               ),
-              Expanded(
-                child: Container(
-                  child: RaisedButton(
-                    onPressed: () {},
-                    child: Text("Click"),
-                  ),
+              Container(
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Text("Click"),
                 ),
               ),
             ],
