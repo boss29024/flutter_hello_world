@@ -18,11 +18,19 @@ class MyApp extends StatelessWidget {
         body: ListView.builder(
             itemCount: items.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: Icon(Icons.directions_bus),
-                title: Text("${items[index]}"),
-                subtitle: Text("CodeMobiles company"),
-                trailing: Icon(Icons.notifications_none),
+              return Column(
+                children: <Widget>[
+                  ListTile(
+                    leading: Icon(Icons.directions_bus),
+                    title: Text("${items[index]}"),
+                    subtitle: Text("CodeMobiles company"),
+                    trailing: Icon(Icons.notifications_none),
+                  ),
+                  Divider(
+                    height: 2,
+                    color: Colors.green[300],
+                  )
+                ],
               );
             }),
       ),
