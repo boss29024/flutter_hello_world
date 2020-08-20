@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  final List<String> items =
+      List<String>.generate(20, (index) => "Itme: ${++index}");
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -12,60 +15,85 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            Container(
-              alignment: FractionalOffset.center,
-              width: 150,
-              color: Colors.red,
-              child: Text(
-                "A",
-                style: TextStyle(fontSize: 100, color: Colors.white),
-              ),
-            ),
-            Container(
-              alignment: FractionalOffset.center,
-              width: 150,
-              color: Colors.brown,
-              child: Text(
-                "B",
-                style: TextStyle(fontSize: 100, color: Colors.white),
-              ),
-            ),
-            Container(
-              alignment: FractionalOffset.center,
-              width: 150,
-              color: Colors.cyan,
-              child: Text(
-                "C",
-                style: TextStyle(fontSize: 100, color: Colors.white),
-              ),
-            ),
-            Container(
-              alignment: FractionalOffset.center,
-              width: 150,
-              color: Colors.green,
-              child: Text(
-                "D",
-                style: TextStyle(fontSize: 100, color: Colors.white),
-              ),
-            ),
-            Container(
-              alignment: FractionalOffset.center,
-              width: 150,
-              color: Colors.indigo,
-              child: Text(
-                "E",
-                style: TextStyle(fontSize: 100, color: Colors.white),
-              ),
-            )
-          ],
-        ),
+        body: ListView.builder(
+            itemCount: items.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: Icon(Icons.directions_bus),
+                title: Text("${items[index]}"),
+                subtitle: Text("CodeMobiles company"),
+                trailing: Icon(Icons.notifications_none),
+              );
+            }),
       ),
     );
   }
 }
+
+// class MyApp extends StatelessWidget { LitsView Horizontal แนวนอน
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: ListView(
+//           scrollDirection: Axis.horizontal,
+//           children: <Widget>[
+//             Container(
+//               alignment: FractionalOffset.center,
+//               width: 150,
+//               color: Colors.red,
+//               child: Text(
+//                 "A",
+//                 style: TextStyle(fontSize: 100, color: Colors.white),
+//               ),
+//             ),
+//             Container(
+//               alignment: FractionalOffset.center,
+//               width: 150,
+//               color: Colors.brown,
+//               child: Text(
+//                 "B",
+//                 style: TextStyle(fontSize: 100, color: Colors.white),
+//               ),
+//             ),
+//             Container(
+//               alignment: FractionalOffset.center,
+//               width: 150,
+//               color: Colors.cyan,
+//               child: Text(
+//                 "C",
+//                 style: TextStyle(fontSize: 100, color: Colors.white),
+//               ),
+//             ),
+//             Container(
+//               alignment: FractionalOffset.center,
+//               width: 150,
+//               color: Colors.green,
+//               child: Text(
+//                 "D",
+//                 style: TextStyle(fontSize: 100, color: Colors.white),
+//               ),
+//             ),
+//             Container(
+//               alignment: FractionalOffset.center,
+//               width: 150,
+//               color: Colors.indigo,
+//               child: Text(
+//                 "E",
+//                 style: TextStyle(fontSize: 100, color: Colors.white),
+//               ),
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { ListViewแนวตั้ง
 //   @override
