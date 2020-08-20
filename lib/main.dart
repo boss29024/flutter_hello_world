@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final List<String> items =
-      List<String>.generate(20, (index) => "Itme: ${++index}");
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -15,28 +12,66 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              return Column(
-                children: <Widget>[
-                  ListTile(
-                    leading: Icon(Icons.directions_bus),
-                    title: Text("${items[index]}"),
-                    subtitle: Text("CodeMobiles company"),
-                    trailing: Icon(Icons.notifications_none),
-                  ),
-                  Divider(
-                    height: 2,
-                    color: Colors.green[300],
-                  )
-                ],
-              );
-            }),
+        body: GridView.extent(
+          padding: EdgeInsets.all(8),
+          //crossAxisSpacing: 8,
+          //childAspectRatio: 1,
+          //mainAxisSpacing: 8,
+          maxCrossAxisExtent: 250,
+          //crossAxisCount: 2, //count
+          children: buildGridList(18),
+        ),
       ),
     );
   }
+
+  List<Card> buildGridList(int count) {
+    return List.generate(
+        count,
+        (index) => Card(
+              child: Image.network(
+                'https://lh3.googleusercontent.com/proxy/U0nL_5bUrrtplh4UTcXTpAV8g6wuNct_N5mYq7LqtIHZE0H_m7UKrw96lw5yW8PlliyCxh9YTz-cFrJumP9os-cBvl5H7nnp9rIWodsKMEX0b497YhMF_7JlCBJxrz0-eLl8R5MHEqUY8bx_HLx6QQ',
+                fit: BoxFit.cover,
+              ),
+            ));
+  }
 }
+
+// class MyApp extends StatelessWidget {  ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
+//   final List<String> items =
+//       List<String>.generate(20, (index) => "Itme: ${++index}");
+
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: ListView.builder(
+//             itemCount: items.length,
+//             itemBuilder: (context, index) {
+//               return Column(
+//                 children: <Widget>[
+//                   ListTile(
+//                     leading: Icon(Icons.directions_bus),
+//                     title: Text("${items[index]}"),
+//                     subtitle: Text("CodeMobiles company"),
+//                     trailing: Icon(Icons.notifications_none),
+//                   ),
+//                   Divider(
+//                     height: 2,
+//                     color: Colors.green[300],
+//                   )
+//                 ],
+//               );
+//             }),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { LitsView Horizontal แนวนอน
 //   @override
