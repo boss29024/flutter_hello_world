@@ -12,30 +12,66 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: GridView.extent(
-          padding: EdgeInsets.all(8),
-          //crossAxisSpacing: 8,
-          //childAspectRatio: 1,
-          //mainAxisSpacing: 8,
-          maxCrossAxisExtent: 250,
-          //crossAxisCount: 2, //count
-          children: buildGridList(18),
+        body: Stack(
+          children: <Widget>[
+            Image.network(
+              'https://i.pinimg.com/736x/bb/af/a5/bbafa5688a7e64c4431a3b575f9035c6.jpg',
+              fit: BoxFit.cover,
+            ),
+            Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(4)),
+              child: Text(
+                "Tabby cat",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white),
+              ),
+            )
+          ],
         ),
       ),
     );
   }
-
-  List<Card> buildGridList(int count) {
-    return List.generate(
-        count,
-        (index) => Card(
-              child: Image.network(
-                'https://lh3.googleusercontent.com/proxy/U0nL_5bUrrtplh4UTcXTpAV8g6wuNct_N5mYq7LqtIHZE0H_m7UKrw96lw5yW8PlliyCxh9YTz-cFrJumP9os-cBvl5H7nnp9rIWodsKMEX0b497YhMF_7JlCBJxrz0-eLl8R5MHEqUY8bx_HLx6QQ',
-                fit: BoxFit.cover,
-              ),
-            ));
-  }
 }
+
+// class MyApp extends StatelessWidget { Grid View
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: GridView.extent(
+//           padding: EdgeInsets.all(8),
+//           //crossAxisSpacing: 8,
+//           //childAspectRatio: 1,
+//           //mainAxisSpacing: 8,
+//           maxCrossAxisExtent: 250,
+//           //crossAxisCount: 2, //count
+//           children: buildGridList(18),
+//         ),
+//       ),
+//     );
+//   }
+
+//   List<Card> buildGridList(int count) {
+//     return List.generate(
+//         count,
+//         (index) => Card(
+//               child: Image.network(
+//                 'https://lh3.googleusercontent.com/proxy/U0nL_5bUrrtplh4UTcXTpAV8g6wuNct_N5mYq7LqtIHZE0H_m7UKrw96lw5yW8PlliyCxh9YTz-cFrJumP9os-cBvl5H7nnp9rIWodsKMEX0b497YhMF_7JlCBJxrz0-eLl8R5MHEqUY8bx_HLx6QQ',
+//                 fit: BoxFit.cover,
+//               ),
+//             ));
+//   }
+// }
 
 // class MyApp extends StatelessWidget {  ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
 //   final List<String> items =
