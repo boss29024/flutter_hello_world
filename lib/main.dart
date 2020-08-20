@@ -5,43 +5,78 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var isShow = true;
     // TODO: implement build
     return MaterialApp(
-      title: "CM Layouty",
+      title: "CM Layout",
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("CM Layout"),
-        ),
-        body: Padding(
-          padding: EdgeInsets.all(20),
-          child: Row(
+          appBar: AppBar(
+            title: Text("CM Layout"),
+          ),
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Expanded(
-                flex: 3,
-                child: Container(
-                  child: Text(
-                    "Codemobiles",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20,
-                    ),
-                  ),
-                  // color: Colors.red,
-                ),
+              Text(
+                "Title",
+                style: TextStyle(fontSize: 16),
               ),
               Container(
-                child: RaisedButton(
-                  onPressed: () {},
-                  child: Text("Click"),
-                ),
+                child: isShow
+                    ? SizedBox()
+                    : Text(
+                        "Sub Title",
+                      ),
+              ),
+              Text(
+                "Date: 20/08/63",
+                style: TextStyle(fontSize: 16),
               ),
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
+
+// class MyApp extends StatelessWidget { //Expanded
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layouty",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: Padding(
+//           padding: EdgeInsets.all(20),
+//           child: Row(
+//             children: <Widget>[
+//               Expanded(
+//                 flex: 3,
+//                 child: Container(
+//                   child: Text(
+//                     "Codemobiles",
+//                     style: TextStyle(
+//                       fontWeight: FontWeight.w600,
+//                       fontSize: 20,
+//                     ),
+//                   ),
+//                   // color: Colors.red,
+//                 ),
+//               ),
+//               Container(
+//                 child: RaisedButton(
+//                   onPressed: () {},
+//                   child: Text("Click"),
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { Stack Layout
 //   @override
