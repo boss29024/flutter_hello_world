@@ -13,13 +13,14 @@ class MyApp extends StatelessWidget {
           title: Text("CM Layout"),
         ),
         body: Stack(
+          alignment: Alignment(0, 0.8),
           children: <Widget>[
             Image.network(
-              'https://i.pinimg.com/736x/bb/af/a5/bbafa5688a7e64c4431a3b575f9035c6.jpg',
+              'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg',
               fit: BoxFit.cover,
             ),
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.fromLTRB(12, 4, 12, 4),
               decoration: BoxDecoration(
                   color: Colors.black45,
                   borderRadius: BorderRadius.circular(4)),
