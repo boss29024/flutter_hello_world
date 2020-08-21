@@ -5,37 +5,95 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var isShow = true;
     // TODO: implement build
     return MaterialApp(
       title: "CM Layout",
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("CM Layout"),
-          ),
-          body: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                "Title",
-                style: TextStyle(fontSize: 16),
-              ),
-              Container(
-                child: isShow
-                    ? SizedBox()
-                    : Text(
-                        "Sub Title",
+        appBar: AppBar(
+          title: Text("CM Layout"),
+        ),
+        body: Center(
+          child: IntrinsicWidth(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                buildButtin(text: "AAA"),
+                buildButtin(text: "BBBBBBBBBB"),
+                buildButtin(text: "CCCCCCCCCCCCCCCCCCC"),
+                IntrinsicHeight(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      buildContext(
+                        text: "AAA",
                       ),
-              ),
-              Text(
-                "Date: 20/08/63",
-                style: TextStyle(fontSize: 16),
-              ),
-            ],
-          )),
+                      buildContext(
+                        text: "BBBBBBBBBB",
+                      ),
+                      buildContext(
+                        text: "CCCCCCCCCCCCCCCCCCC",
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildButtin({String text}) {
+    return RaisedButton(
+      child: Text(text),
+      onPressed: () {},
+    );
+  }
+
+  Widget buildContext({String text, double width}) {
+    return Container(
+      child: Text(text),
+      width: 30,
+      color: Colors.blue,
     );
   }
 }
+
+// class MyApp extends StatelessWidget {//SizedBox
+//   @override
+//   Widget build(BuildContext context) {
+//     var isShow = true;
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//           appBar: AppBar(
+//             title: Text("CM Layout"),
+//           ),
+//           body: Column(
+//             crossAxisAlignment: CrossAxisAlignment.start,
+//             children: <Widget>[
+//               Text(
+//                 "Title",
+//                 style: TextStyle(fontSize: 16),
+//               ),
+//               Container(
+//                 child: isShow
+//                     ? SizedBox()
+//                     : Text(
+//                         "Sub Title",
+//                       ),
+//               ),
+//               Text(
+//                 "Date: 20/08/63",
+//                 style: TextStyle(fontSize: 16),
+//               ),
+//             ],
+//           )),
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget { //Expanded
 //   @override
