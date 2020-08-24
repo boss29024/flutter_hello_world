@@ -2,63 +2,79 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      title: "CM Layout",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("CM Layout"),
-        ),
-        body: Center(
-          child: IntrinsicWidth(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                buildButtin(text: "AAA"),
-                buildButtin(text: "BBBBBBBBBB"),
-                buildButtin(text: "CCCCCCCCCCCCCCCCCCC"),
-                IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      buildContext(
-                        text: "AAA",
-                      ),
-                      buildContext(
-                        text: "BBBBBBBBBB",
-                      ),
-                      buildContext(
-                        text: "CCCCCCCCCCCCCCCCCCC",
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: ,
+//       ),
+//     );
+//   }
+// }
 
-  Widget buildButtin({String text}) {
-    return RaisedButton(
-      child: Text(text),
-      onPressed: () {},
-    );
-  }
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: Center(
+//           child: IntrinsicWidth(
+//             child: Column(
+//               crossAxisAlignment: CrossAxisAlignment.stretch,
+//               children: <Widget>[
+//                 buildButtin(text: "AAA"),
+//                 buildButtin(text: "BBBBBBBBBB"),
+//                 buildButtin(text: "CCCCCCCCCCCCCCCCCCC"),
+//                 IntrinsicHeight(
+//                   child: Row(
+//                     crossAxisAlignment: CrossAxisAlignment.stretch,
+//                     children: <Widget>[
+//                       buildContext(
+//                         text: "AAA",
+//                       ),
+//                       buildContext(
+//                         text: "BBBBBBBBBB",
+//                       ),
+//                       buildContext(
+//                         text: "CCCCCCCCCCCCCCCCCCC",
+//                       )
+//                     ],
+//                   ),
+//                 )
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
 
-  Widget buildContext({String text, double width}) {
-    return Container(
-      child: Text(text),
-      width: 30,
-      color: Colors.blue,
-    );
-  }
-}
+//   Widget buildButtin({String text}) {
+//     return RaisedButton(
+//       child: Text(text),
+//       onPressed: () {},
+//     );
+//   }
+
+//   Widget buildContext({String text, double width}) {
+//     return Container(
+//       child: Text(text),
+//       width: 30,
+//       color: Colors.blue,
+//     );
+//   }
+// }
 
 // class MyApp extends StatelessWidget {//SizedBox
 //   @override
@@ -149,7 +165,7 @@ class MyApp extends StatelessWidget {
 //         body: Stack(
 //           alignment: Alignment(0, 0.8),
 //           children: <Widget>[
-//             CircleAvatar(
+//             CircleAvatar( //ทำรูปโปรไฟล์
 //               backgroundImage: NetworkImage(
 //                   'https://www.catster.com/wp-content/uploads/2017/11/Mackerel-Tabby-cat.jpg'),
 //               radius: 150,
@@ -209,7 +225,7 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-// class MyApp extends StatelessWidget {  ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
+// class MyApp extends StatelessWidget {  //ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
 //   final List<String> items =
 //       List<String>.generate(20, (index) => "Itme: ${++index}");
 
@@ -245,7 +261,7 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-// class MyApp extends StatelessWidget { LitsView Horizontal แนวนอน
+// class MyApp extends StatelessWidget { //LitsView Horizontal แนวนอน
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
