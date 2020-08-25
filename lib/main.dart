@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Main());
 
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
-//     return MaterialApp(
-//       title: "CM Layout",
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text("CM Layout"),
-//         ),
-//         body: ,
-//       ),
-//     );
-//   }
-// }
+class Main extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      title: "CM Layout",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("CM Layout"),
+        ),
+        body: ,
+      ),
+    );
+   }
+ }
 
-// class MyApp extends StatelessWidget {
+// class Main extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -76,7 +76,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget {//SizedBox
+// class Main extends StatelessWidget {//SizedBox
 //   @override
 //   Widget build(BuildContext context) {
 //     var isShow = true;
@@ -111,10 +111,9 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { //Expanded
+// class Main extends StatelessWidget { //Expanded
 //   @override
-//   Widget build(BuildContext context) {
-//     // TODO: implement build
+//   Widget build(BuildContext context) {    
 //     return MaterialApp(
 //       title: "CM Layouty",
 //       home: Scaffold(
@@ -152,7 +151,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { Stack Layout
+// class Main extends StatelessWidget { Stack Layout
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -190,7 +189,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { Grid View
+// class Main extends StatelessWidget { Grid View
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -225,7 +224,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget {  //ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
+// class Main extends StatelessWidget {  //ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
 //   final List<String> items =
 //       List<String>.generate(20, (index) => "Itme: ${++index}");
 
@@ -261,7 +260,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { //LitsView Horizontal แนวนอน
+// class Main extends StatelessWidget { //LitsView Horizontal แนวนอน
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -326,7 +325,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { ListViewแนวตั้ง
+// class Main extends StatelessWidget { ListViewแนวตั้ง
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -368,7 +367,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { ListView1
+// class Main extends StatelessWidget { ListView1
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -406,7 +405,7 @@ void main() => runApp(MyApp());
 //   }
 // }
 
-// class MyApp extends StatelessWidget { ตัวอย่างRow and column
+// class Main extends StatelessWidget { ตัวอย่างRow and column
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
