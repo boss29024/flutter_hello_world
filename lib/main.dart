@@ -1,57 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Main());
+void main() => runApp(MyApp());
 
-class Main extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var _title = "CM Workshop";
     // TODO: implement build
     return MaterialApp(
-      title: "CM Layout",
+      title: _title,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("CM Layout"),
+          title: Text(_title),
         ),
-        body: Stack(
-          children: <Widget>[
-            Image.network(
-              'https://static.zerochan.net/Mobile.Suit.Gundam.08th.Ms.Team.full.2318407.jpg',
-              fit: BoxFit.contain,
-            ),
-            Row(
-              children: <Widget>[
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://eskipaper.com/images/gundam-rx-78-1.jpg'),
-                  radius: 50,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text(
-                      "I am Gumdam",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "I am Boss",
-                      style: TextStyle(
-                        fontSize: 20,
-                      ),
-                    )
-                  ],
-                ),
-              ],
-            )
-          ],
-        ),
+        body: ListView(children: <Widget>[headerSection, titlesSection, buttonSection, courseSection],),
       ),
     );
   }
 }
 
-// class Main extends StatelessWidget {
+Widget headerSection = Container(height: 150, color: Colors.blue,);
+Widget titlesSection = Container(height: 150, color: Colors.blue,);
+Widget buttonSection = Container(height: 150, color: Colors.blue,);
+Widget courseSection = Container(height: 150, color: Colors.blue,);
+// class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -109,7 +81,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget {//SizedBox
+// class MyApp extends StatelessWidget {//SizedBox
 //   @override
 //   Widget build(BuildContext context) {
 //     var isShow = true;
@@ -144,7 +116,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { //Expanded
+// class MyApp extends StatelessWidget { //Expanded
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
@@ -184,7 +156,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { Stack Layout
+// class MyApp extends StatelessWidget { Stack Layout
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -222,7 +194,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { Grid View
+// class MyApp extends StatelessWidget { Grid View
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -257,7 +229,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget {  //ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
+// class MyApp extends StatelessWidget {  //ListView builder ลูกเยอะๆหรือข้อมูลเยอะ
 //   final List<String> items =
 //       List<String>.generate(20, (index) => "Itme: ${++index}");
 
@@ -293,7 +265,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { //LitsView Horizontal แนวนอน
+// class MyApp extends StatelessWidget { //LitsView Horizontal แนวนอน
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -358,7 +330,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { ListViewแนวตั้ง
+// class MyApp extends StatelessWidget { ListViewแนวตั้ง
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -400,7 +372,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { ListView1
+// class MyApp extends StatelessWidget { ListView1
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -438,7 +410,7 @@ class Main extends StatelessWidget {
 //   }
 // }
 
-// class Main extends StatelessWidget { ตัวอย่างRow and column
+// class MyApp extends StatelessWidget { ตัวอย่างRow and column
 //   @override
 //   Widget build(BuildContext context) {
 //     // TODO: implement build
@@ -511,3 +483,52 @@ class Main extends StatelessWidget {
 //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
 //   ),
 // ),
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: "CM Layout",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("CM Layout"),
+//         ),
+//         body: Stack(
+//           children: <Widget>[
+//             Image.network(
+//               'https://static.zerochan.net/Mobile.Suit.Gundam.08th.Ms.Team.full.2318407.jpg',
+//               fit: BoxFit.contain,
+//             ),
+//             Row(
+//               children: <Widget>[
+//                 CircleAvatar(
+//                   backgroundImage: NetworkImage(
+//                       'https://eskipaper.com/images/gundam-rx-78-1.jpg'),
+//                   radius: 50,
+//                 ),
+//                 Column(
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   mainAxisSize: MainAxisSize.min,
+//                   children: <Widget>[
+//                     Text(
+//                       "I am Gumdam",
+//                       style:
+//                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+//                     ),
+//                     Text(
+//                       "I am Boss",
+//                       style: TextStyle(
+//                         fontSize: 20,
+//                       ),
+//                     )
+//                   ],
+//                 ),
+//               ],
+//             )
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
