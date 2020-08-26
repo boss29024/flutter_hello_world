@@ -12,11 +12,44 @@ class Main extends StatelessWidget {
         appBar: AppBar(
           title: Text("CM Layout"),
         ),
-        body: ,
+        body: Stack(
+          children: <Widget>[
+            Image.network(
+              'https://static.zerochan.net/Mobile.Suit.Gundam.08th.Ms.Team.full.2318407.jpg',
+              fit: BoxFit.contain,
+            ),
+            Row(
+              children: <Widget>[
+                CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://eskipaper.com/images/gundam-rx-78-1.jpg'),
+                  radius: 50,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(
+                      "I am Gumdam",
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "I am Boss",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
-   }
- }
+  }
+}
 
 // class Main extends StatelessWidget {
 //   @override
@@ -113,7 +146,7 @@ class Main extends StatelessWidget {
 
 // class Main extends StatelessWidget { //Expanded
 //   @override
-//   Widget build(BuildContext context) {    
+//   Widget build(BuildContext context) {
 //     return MaterialApp(
 //       title: "CM Layouty",
 //       home: Scaffold(
