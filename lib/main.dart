@@ -29,25 +29,63 @@ class MyApp extends StatelessWidget {
 Widget headerSection = Image.network(
   "https://i.pinimg.com/originals/6d/16/1e/6d161e74526ca1c36cf200ca8f6b5f3f.jpg",
 );
-Widget titlesSection = Row(
-  children: <Widget>[
-    Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text("taksin", style: TextStyle(fontWeight: FontWeight.bold),),
-          Text("Meesuprang", style: TextStyle(color: Colors.grey[500])),
-        ],
+Widget titlesSection = Padding(
+  padding: EdgeInsets.all(50),
+  child: Row(
+    children: <Widget>[
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "taksin",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text("Meesuprang", style: TextStyle(color: Colors.grey[500])),
+          ],
+        ),
       ),
-    ),
-    Icon(Icons.thumb_up),
-    Text("99")
+      Icon(
+        Icons.thumb_up,
+        color: Colors.blue,
+      ),
+      Container(
+        margin: EdgeInsets.only(left: 8),
+        child: Text("99"),
+      ),
+    ],
+  ),
+);
+
+Widget buttonSection = Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: <Widget>[
+    _buildButtonColumn(icon: Icons.thumb_up, label: "Like"),
+    _buildButtonColumn(icon: Icons.comment, label: "Comment"),
+    _buildButtonColumn(icon: Icons.share, label: "Share"),
   ],
 );
-Widget buttonSection = Container(
-  height: 250,
-  color: Colors.green,
-);
+
+Column _buildButtonColumn({IconData icon, String label}) {
+  var icColor = Colors.grey.shade500;
+  return Column(
+    children: <Widget>[
+      Icon(
+        icon,
+        color: icColor,
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 8),
+        child: Text(
+          label,
+          style: TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 13, color: icColor),
+        ),
+      ),
+    ],
+  );
+}
+
 Widget courseSection = Container(
   height: 250,
   color: Colors.pink,
