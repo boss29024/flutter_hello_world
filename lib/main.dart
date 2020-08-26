@@ -88,9 +88,14 @@ Column _buildButtonColumn({IconData icon, String label}) {
 
 Widget courseSection = Container(
   margin: EdgeInsetsDirectional.only(top: 70),
+  padding: EdgeInsets.all(8),
   child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: <Widget>[
-      Text("GundamWiKi"),
+      Padding(
+        padding: EdgeInsets.all(8),
+        child: Text("GundamWiKi"),
+      ),
       Container(
         height: 120,
         child: ListView(
