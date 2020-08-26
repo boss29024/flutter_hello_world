@@ -87,9 +87,37 @@ Column _buildButtonColumn({IconData icon, String label}) {
 }
 
 Widget courseSection = Container(
-  height: 250,
-  color: Colors.pink,
+  margin: EdgeInsetsDirectional.only(top: 70),
+  child: Column(
+    children: <Widget>[
+      Text("GundamWiKi"),
+      Container(
+        height: 120,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: <Widget>[
+            _buildCardLisView(
+                url: 'https://da.lnwfile.com/_/da/_raw/sw/xs/64.jpg'),
+            _buildCardLisView(url: 'https://fo.lnwfile.com/dhqx2b.jpg'),
+            _buildCardLisView(
+                url:
+                    'https://vignette.wikia.nocookie.net/gundam/images/3/38/Rgm-79sp_gm_sniper-ii_hguc.jpg/revision/latest?cb=20120829012823'),
+            _buildCardLisView(url: 'https://fo.lnwfile.com/8x9w9y.jpg'),
+          ],
+        ),
+      )
+    ],
+  ),
 );
+
+Card _buildCardLisView({String url}) {
+  return Card(
+    child: Image.network(
+      url,
+    ),
+  );
+}
+
 // class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
