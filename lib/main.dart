@@ -26,20 +26,30 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Widget headerSection = Container(
-  height: 150,
-  color: Colors.blue,
+Widget headerSection = Image.network(
+  "https://i.pinimg.com/originals/6d/16/1e/6d161e74526ca1c36cf200ca8f6b5f3f.jpg",
 );
-Widget titlesSection = Container(
-  height: 150,
-  color: Colors.red,
+Widget titlesSection = Row(
+  children: <Widget>[
+    Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("taksin", style: TextStyle(fontWeight: FontWeight.bold),),
+          Text("Meesuprang", style: TextStyle(color: Colors.grey[500])),
+        ],
+      ),
+    ),
+    Icon(Icons.thumb_up),
+    Text("99")
+  ],
 );
 Widget buttonSection = Container(
-  height: 150,
+  height: 250,
   color: Colors.green,
 );
 Widget courseSection = Container(
-  height: 150,
+  height: 250,
   color: Colors.pink,
 );
 // class MyApp extends StatelessWidget {
