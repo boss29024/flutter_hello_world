@@ -13,16 +13,35 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(_title),
         ),
-        body: ListView(children: <Widget>[headerSection, titlesSection, buttonSection, courseSection],),
+        body: ListView(
+          children: <Widget>[
+            headerSection,
+            titlesSection,
+            buttonSection,
+            courseSection
+          ],
+        ),
       ),
     );
   }
 }
 
-Widget headerSection = Container(height: 150, color: Colors.blue,);
-Widget titlesSection = Container(height: 150, color: Colors.blue,);
-Widget buttonSection = Container(height: 150, color: Colors.blue,);
-Widget courseSection = Container(height: 150, color: Colors.blue,);
+Widget headerSection = Container(
+  height: 150,
+  color: Colors.blue,
+);
+Widget titlesSection = Container(
+  height: 150,
+  color: Colors.red,
+);
+Widget buttonSection = Container(
+  height: 150,
+  color: Colors.green,
+);
+Widget courseSection = Container(
+  height: 150,
+  color: Colors.pink,
+);
 // class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
