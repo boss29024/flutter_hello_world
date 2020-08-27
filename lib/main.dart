@@ -49,7 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
         // elevation: 30,//เงา
         //titleSpacing: 150,//ระยะห่างtitle
         //textTheme: TextTheme(title: TextStyle(color: Colors.red, fontSize: 50 )),
+        //iconTheme: IconThemeData(color: Colors.red, size: 50),
+        leading: Icon(Icons.school),
         title: Text(widget.title),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {},
+          )
+        ],
       ),
     );
   }
