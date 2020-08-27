@@ -5,123 +5,157 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var _title = "CM Workshop";
     // TODO: implement build
+    final String appTitle = "CM Layout";
+
     return MaterialApp(
-      title: _title,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(_title),
-        ),
-        body: ListView(
-          children: <Widget>[
-            headerSection,
-            titlesSection,
-            buttonSection,
-            courseSection
-          ],
-        ),
+        title: appTitle,
+        home: MyHomePage(
+          title: appTitle,
+        ));
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  final String title;
+  MyHomePage({this.title});
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  //ตัวเก็บStage
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
     );
   }
 }
 
-Widget headerSection = Image.network(
-  "https://i.pinimg.com/originals/6d/16/1e/6d161e74526ca1c36cf200ca8f6b5f3f.jpg",
-);
-Widget titlesSection = Padding(
-  padding: EdgeInsets.all(50),
-  child: Row(
-    children: <Widget>[
-      Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              "taksin",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text("Meesuprang", style: TextStyle(color: Colors.grey[500])),
-          ],
-        ),
-      ),
-      Icon(
-        Icons.thumb_up,
-        color: Colors.blue,
-      ),
-      Container(
-        margin: EdgeInsets.only(left: 8),
-        child: Text("99"),
-      ),
-    ],
-  ),
-);
+// class MyApp extends StatelessWidget {//ออกแบบUI
+//   @override
+//   Widget build(BuildContext context) {
+//     var _title = "CM Workshop";
+//     // TODO: implement build
+//     return MaterialApp(
+//       title: _title,
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text(_title),
+//         ),
+//         body: ListView(
+//           children: <Widget>[
+//             headerSection,
+//             titlesSection,
+//             buttonSection,
+//             courseSection
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
-Widget buttonSection = Row(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: <Widget>[
-    _buildButtonColumn(icon: Icons.thumb_up, label: "Like"),
-    _buildButtonColumn(icon: Icons.comment, label: "Comment"),
-    _buildButtonColumn(icon: Icons.share, label: "Share"),
-  ],
-);
+// Widget headerSection = Image.network(
+//   "https://i.pinimg.com/originals/6d/16/1e/6d161e74526ca1c36cf200ca8f6b5f3f.jpg",
+// );
+// Widget titlesSection = Padding(
+//   padding: EdgeInsets.all(50),
+//   child: Row(
+//     children: <Widget>[
+//       Expanded(
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: <Widget>[
+//             Text(
+//               "taksin",
+//               style: TextStyle(fontWeight: FontWeight.bold),
+//             ),
+//             Text("Meesuprang", style: TextStyle(color: Colors.grey[500])),
+//           ],
+//         ),
+//       ),
+//       Icon(
+//         Icons.thumb_up,
+//         color: Colors.blue,
+//       ),
+//       Container(
+//         margin: EdgeInsets.only(left: 8),
+//         child: Text("99"),
+//       ),
+//     ],
+//   ),
+// );
 
-Column _buildButtonColumn({IconData icon, String label}) {
-  var icColor = Colors.grey.shade500;
-  return Column(
-    children: <Widget>[
-      Icon(
-        icon,
-        color: icColor,
-      ),
-      Container(
-        margin: EdgeInsets.only(top: 8),
-        child: Text(
-          label,
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 13, color: icColor),
-        ),
-      ),
-    ],
-  );
-}
+// Widget buttonSection = Row(
+//   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//   children: <Widget>[
+//     _buildButtonColumn(icon: Icons.thumb_up, label: "Like"),
+//     _buildButtonColumn(icon: Icons.comment, label: "Comment"),
+//     _buildButtonColumn(icon: Icons.share, label: "Share"),
+//   ],
+// );
 
-Widget courseSection = Container(
-  margin: EdgeInsetsDirectional.only(top: 70),
-  padding: EdgeInsets.all(8),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      Padding(
-        padding: EdgeInsets.all(8),
-        child: Text("GundamWiKi"),
-      ),
-      Container(
-        height: 120,
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            _buildCardLisView(
-                url: 'https://da.lnwfile.com/_/da/_raw/sw/xs/64.jpg'),
-            _buildCardLisView(url: 'https://fo.lnwfile.com/dhqx2b.jpg'),
-            _buildCardLisView(
-                url:
-                    'https://vignette.wikia.nocookie.net/gundam/images/3/38/Rgm-79sp_gm_sniper-ii_hguc.jpg/revision/latest?cb=20120829012823'),
-            _buildCardLisView(url: 'https://fo.lnwfile.com/8x9w9y.jpg'),
-          ],
-        ),
-      )
-    ],
-  ),
-);
+// Column _buildButtonColumn({IconData icon, String label}) {
+//   var icColor = Colors.grey.shade500;
+//   return Column(
+//     children: <Widget>[
+//       Icon(
+//         icon,
+//         color: icColor,
+//       ),
+//       Container(
+//         margin: EdgeInsets.only(top: 8),
+//         child: Text(
+//           label,
+//           style: TextStyle(
+//               fontWeight: FontWeight.bold, fontSize: 13, color: icColor),
+//         ),
+//       ),
+//     ],
+//   );
+// }
 
-Card _buildCardLisView({String url}) {
-  return Card(
-    child: Image.network(
-      url,
-    ),
-  );
-}
+// Widget courseSection = Container(
+//   margin: EdgeInsetsDirectional.only(top: 70),
+//   padding: EdgeInsets.all(8),
+//   child: Column(
+//     crossAxisAlignment: CrossAxisAlignment.start,
+//     children: <Widget>[
+//       Padding(
+//         padding: EdgeInsets.all(8),
+//         child: Text("GundamWiKi"),
+//       ),
+//       Container(
+//         height: 120,
+//         child: ListView(
+//           scrollDirection: Axis.horizontal,
+//           children: <Widget>[
+//             _buildCardLisView(
+//                 url: 'https://da.lnwfile.com/_/da/_raw/sw/xs/64.jpg'),
+//             _buildCardLisView(url: 'https://fo.lnwfile.com/dhqx2b.jpg'),
+//             _buildCardLisView(
+//                 url:
+//                     'https://vignette.wikia.nocookie.net/gundam/images/3/38/Rgm-79sp_gm_sniper-ii_hguc.jpg/revision/latest?cb=20120829012823'),
+//             _buildCardLisView(url: 'https://fo.lnwfile.com/8x9w9y.jpg'),
+//           ],
+//         ),
+//       )
+//     ],
+//   ),
+// );
+
+// Card _buildCardLisView({String url}) {
+//   return Card(
+//     child: Image.network(
+//       url,
+//     ),
+//   );
+// }
 
 // class MyApp extends StatelessWidget {
 //   @override
