@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         // elevation: 30,//เงา
-        titleSpacing: 150,//ระยะห่างtitle
+        //titleSpacing: 150,//ระยะห่างtitle
+        //textTheme: TextTheme(title: TextStyle(color: Colors.red, fontSize: 50 )),
         title: Text(widget.title),
       ),
     );
