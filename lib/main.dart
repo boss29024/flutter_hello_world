@@ -46,6 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // elevation: 30,//เงา
+        titleSpacing: 150,//ระยะห่างtitle
         title: Text(widget.title),
       ),
     );
