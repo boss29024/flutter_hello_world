@@ -41,6 +41,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Choice _selectChoice = choices[0];
+
   //ตัวเก็บStage
   @override
   Widget build(BuildContext context) {
@@ -53,12 +55,65 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Icon(Icons.school),
         title: Text(widget.title),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {},
-          )
+          _buildActionButton(choices[0]),
+          _buildActionButton(choices[1]),
+          _buildPopupMenu(),
         ],
       ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              _selectChoice.icon,
+              size: 120,
+            ),
+            Text(_selectChoice.title),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildActionButton(Choice item) {
+    return IconButton(
+      icon: Icon(item.icon),
+      // iconSize: 50,
+      // color: Colors.white,
+      // highlightColor: Colors.grey,
+      // splashColor: Colors.grey,
+      tooltip: item.title,
+      onPressed: () {
+        _select(item);
+      },
+    );
+  }
+
+  void _select(Choice choice) {
+    setState(
+      () {
+        _selectChoice = choice;
+      },
+    );
+  }
+
+  Widget _buildPopupMenu() {
+    return PopupMenuButton<Choice>(
+      onSelected: _select,
+      icon: Icon(Icons.menu),
+      tooltip: "Menu",
+      onCanceled: () {
+        print("onCanceled");
+      },
+      itemBuilder: (context) {
+        return choices.skip(2).map((Choice choice) {
+          return PopupMenuItem<Choice>(
+            value: choice,
+            child: Text(choice.title),
+          );
+        }).toList();
+      },
     );
   }
 }
